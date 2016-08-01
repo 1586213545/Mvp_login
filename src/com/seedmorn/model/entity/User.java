@@ -1,4 +1,4 @@
-package com.seedmorn.bean;
+package com.seedmorn.model.entity;
 
 public class User {
 	private String username;

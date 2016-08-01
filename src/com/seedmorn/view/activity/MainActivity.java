@@ -1,4 +1,4 @@
-package com.seedmorn.activity;
+package com.seedmorn.view.activity;
 
 import android.app.Activity;
 import android.os.Bundle;

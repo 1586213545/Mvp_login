@@ -2,10 +2,10 @@ package com.seedmorn.presenter;
 
 import android.os.Handler;
 
-import com.seedmorn.activity.IUserLoginView;
-import com.seedmorn.biz.IUserBiz;
-import com.seedmorn.biz.OnLoginListener;
-import com.seedmorn.biz.UserBiz;
+import com.seedmorn.model.biz.IUserBiz;
+import com.seedmorn.model.biz.OnLoginListener;
+import com.seedmorn.model.biz.UserBiz;
+import com.seedmorn.view.in.IUserLoginView;
 
 public class UserLoginPresenter {
 
@@ -14,13 +14,17 @@ public class UserLoginPresenter {
 	private Handler mHandler = new Handler();
 
 	public UserLoginPresenter(IUserLoginView iUserLoginView) {
+		
 		this.iUserLoginView = iUserLoginView;
+		
 		iUserBiz = new UserBiz();
 
 	}
 
 	public void preLogin() {
+		
 		iUserLoginView.showDialog();
+		
 		iUserBiz.login(iUserLoginView.getUser(), new OnLoginListener() {
 
 			@Override

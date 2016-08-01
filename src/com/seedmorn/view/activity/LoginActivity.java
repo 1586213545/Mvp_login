@@ -1,4 +1,4 @@
-package com.seedmorn.activity;
+package com.seedmorn.view.activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -11,8 +11,9 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.seedmorn.bean.User;
+import com.seedmorn.model.entity.User;
 import com.seedmorn.presenter.UserLoginPresenter;
+import com.seedmorn.view.in.IUserLoginView;
 import com.seedmorn.w33.R;
 
 public class LoginActivity extends Activity implements IUserLoginView {

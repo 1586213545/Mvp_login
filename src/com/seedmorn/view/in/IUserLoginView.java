@@ -1,6 +1,6 @@
-package com.seedmorn.activity;
+package com.seedmorn.view.in;
 
-import com.seedmorn.bean.User;
+import com.seedmorn.model.entity.User;
 
 public interface IUserLoginView {
 	public void showDialog();
