@@ -14,24 +14,21 @@ public class UserLoginPresenter {
 	private Handler mHandler = new Handler();
 
 	public UserLoginPresenter(IUserLoginView iUserLoginView) {
-		
+
 		this.iUserLoginView = iUserLoginView;
-		
+
 		iUserBiz = new UserBiz();
 
 	}
 
 	public void preLogin() {
-		
+
 		iUserLoginView.showDialog();
-		
-		iUserBiz.login(iUserLoginView.getUser(), new OnLoginListener() {
 
-			@Override
+		OnLoginListener loginListener = new OnLoginListener() {
+
 			public void loginSuccess() {
-
 				mHandler.post(new Runnable() {
-					@Override
 					public void run() {
 						iUserLoginView.hideDialog();
 						iUserLoginView.showToast("success");
@@ -40,11 +37,8 @@ public class UserLoginPresenter {
 				});
 			}
 
-			@Override
 			public void loginFailed() {
-				// TODO Auto-generated method stub
 				mHandler.post(new Runnable() {
-					@Override
 					public void run() {
 						iUserLoginView.showToast("failed");
 						iUserLoginView.hideDialog();
@@ -52,7 +46,9 @@ public class UserLoginPresenter {
 				});
 
 			}
-		});
+		};
+		
+		iUserBiz.login(iUserLoginView.getUser(), loginListener);
 	}
 
 	public void clear() {

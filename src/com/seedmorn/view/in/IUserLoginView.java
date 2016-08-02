@@ -4,9 +4,14 @@ import com.seedmorn.model.entity.User;
 
 public interface IUserLoginView {
 	public void showDialog();
+
 	public void hideDialog();
+
 	public void showToast(String text);
+
 	public User getUser();
-	void clearUser();
-	void toMainActivity();
+
+	public void clearUser();
+
+	public void toMainActivity();
 }
