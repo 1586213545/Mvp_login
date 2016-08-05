@@ -1,2 +1,8 @@
+<<<<<<< HEAD
 eclipse.preferences.version=1
 encoding/<project>=UTF-8
+=======
+eclipse.preferences.version=1
+encoding//src/com/seedmorn/utility/DataUtil.java=UTF-8
+encoding//src/com/seedmorn/utility/FileUtil.java=UTF-8
+>>>>>>> branch 'master' of https://github.com/1586213545/Mvp_login.git
