@@ -8,6 +8,7 @@ public class Log {
 	/** 是否输出日志 */
 	private final static boolean DEBUG = true;
 
+	
 	public void init(Context context) {
 		if (!DEBUG) {
 			LogcatHelper.getInstance(context).start();
