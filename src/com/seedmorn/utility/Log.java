@@ -28,6 +28,8 @@ public class Log {
 		if (DEBUG) {
 			android.util.Log.i(TAG, msg);
 		}
+		
+		
 	}
 	public static void d(String TAG, String msg) {
 		if (DEBUG) {
